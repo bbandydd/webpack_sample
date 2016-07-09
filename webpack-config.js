@@ -33,12 +33,12 @@ module.exports = function(options){
                 { test : /\.scss$/, loader:'style!css!postcss!sass?includePaths[]=' + path.resolve(__dirname, './node_modules/compass-mixins/lib') },
                 { test : /\.css$/, loader:'style!css' },
                 { test : /\.(jpg|png|gif)$/, loader: 'url-loader' },
-                { test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader" }, 
-                { test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader" }, 
-                { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader" }, 
-                { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader" }, 
+                { test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader" },
+                { test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader" },
+                { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader" },
+                { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader" },
                 { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader" },
-                { test: /\.(js|jsx)$/, loader: 'babel', include: path.join(__dirname, 'app/src'),  query:{presets:['es2015','react']}}
+                { test: /\.(js|jsx)$/, loader: 'babel', include: path.join(__dirname, 'app/src'),  query:{presets:['es2015','react','stage-2']}}
             );
 
             break;
@@ -50,12 +50,12 @@ module.exports = function(options){
                 { test : /\.scss$/, loader: ExtractTextPlugin.extract('style', 'css!postcss!sass?includePaths[]=' + path.resolve(__dirname, './node_modules/compass-mixins/lib')) },
                 { test : /\.css$/, loader: ExtractTextPlugin.extract('style', 'css') },
                 { test : /\.(jpg|png|gif)$/, loader: 'url-loader' },
-                { test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader" }, 
-                { test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader" }, 
-                { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader" }, 
-                { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader" }, 
+                { test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader" },
+                { test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader" },
+                { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader" },
+                { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader" },
                 { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader" },
-                { test: /\.(js|jsx)$/, loader: 'babel', include: path.join(__dirname, 'app/src'),  query:{presets:['es2015','react']}}
+                { test: /\.(js|jsx)$/, loader: 'babel', include: path.join(__dirname, 'app/src'),  query:{presets:['es2015','react','stage-2']}}
             );
 
             plugins.push(
